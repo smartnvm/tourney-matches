@@ -1,23 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import match_data from './database/match_data';
+import player_data from './database/player_data';
+
+import PlayerList from './components/PlayerList';
+import Player from './components/Player';
+import Match from './components/Match';
+import MatchList from './components/MatchList';
+
 
 function App() {
+
+  const gamerTag = 'Disguised Lizard';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    --------player -------------------
+      <Player />
+      ---------player list------------------
+
+      <PlayerList />
+
+      ------------Match---------------
+
+      <Match />
+      ------------Match List---------------
+      <MatchList />
+      
+
+
+      
     </div>
   );
 }
